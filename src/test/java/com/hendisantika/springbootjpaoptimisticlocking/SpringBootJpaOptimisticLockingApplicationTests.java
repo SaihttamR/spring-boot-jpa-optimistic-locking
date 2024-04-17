@@ -24,6 +24,7 @@ public class SpringBootJpaOptimisticLockingApplicationTests {
 
     @BeforeEach
     void setUp() throws Exception {
+     System.out.println( movieRepository.count());  
         movieRepository.save(new Movie("The great movie", 5));
         movieRepository.save(new Movie("The not so great movie", 4));
         movieRepository.save(new Movie("Yet another movie", 3));
